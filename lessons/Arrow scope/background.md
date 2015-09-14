@@ -28,7 +28,7 @@ Now let's add a nested function (passed to setTimeout), and still try to access 
 
 	//output: TypeError: Cannot set property 'name' of undefined
 
-We get the `TypeError` because the anonymous function we passed to the setTimeout function doesn't refer to the parent's scope, it's got it's own disconnected scope! To solve this before arrow functions, we had to resort to doing some voodoo. There are other ways to get around the problem, but the most common solution is to assign `this` to another variable in the parent scope and then use closures to access that variable from the nested function. Let's have a look. 
+We get the `TypeError` because the anonymous function we passed to the setTimeout function doesn't refer to the parent's scope, it's got its own disconnected scope! To solve this before arrow functions, we had to resort to doing some voodoo. There are other ways to get around the problem, but the most common solution is to assign `this` to another variable in the parent scope and then use closures to access that variable from the nested function. Let's have a look. 
 
 ####Some old school voodoo to get around the problem - Eeeeuwww
 
@@ -45,7 +45,7 @@ We get the `TypeError` because the anonymous function we passed to the setTimeou
 	sayHello();
 	//output: 'hello hendrik'
 
-Now with arrow functions `=>` the nested function is hooked up to it's parent scope automatically. Let's rewrite the code to use an arrow function quickly. 
+Now with arrow functions `=>` the nested function is hooked up to its parent scope automatically. Let's rewrite the code to use an arrow function quickly. 
 
 ####Arrow functions to the rescue
 
